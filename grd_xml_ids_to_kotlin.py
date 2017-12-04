@@ -54,7 +54,7 @@ else:
                     if choose_lang == 1:
                         print("val {} = findViewById<{}>(R.id.{})".format(got_id, view, got_id))
                     elif choose_lang == 2:
-                        print("{} {} = ({}) findViewById(R.id.{}) ".format(view, got_id, view, got_id))
+                        print("{} {} = ({}) findViewById(R.id.{}); ".format(view, got_id, view, got_id))
                     # incrementing the count var
                     cnt += 1
             line = fp.readline()
