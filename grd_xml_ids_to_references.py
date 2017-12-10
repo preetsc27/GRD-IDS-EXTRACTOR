@@ -36,7 +36,7 @@ for file in allFiles:
 # showing the files
 
 if len(files_list) == 0: # empty check
-    print("No files found to show")
+    print(bcolors.FAIL + "No files found to show" + bcolors.ENDC)
     sys.exit()
 else:
     file_i = 1
