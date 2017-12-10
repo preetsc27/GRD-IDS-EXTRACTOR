@@ -160,5 +160,5 @@ else:
                 elif choose_lang == 2:
                     print("{}.setOnClickListener(new View.OnClickListener() {} {});".format(got_id, "{", "}"))
 
-    print("\nToatl {} ids found.".format(cnt))
+    print("\nToatal {} ids found.".format(cnt))
         
