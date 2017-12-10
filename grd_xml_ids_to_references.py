@@ -160,5 +160,29 @@ else:
                 elif choose_lang == 2:
                     print("{}.setOnClickListener(new View.OnClickListener() {} {});".format(got_id, "{", "}"))
 
+        # priniting the data (edittext empty check)
+        print("")
+        print(bcolors.HEADER + "Set On Click Listeners for Buttons".format(xml_file) + bcolors.ENDC)
+        for i in range (0, len(views_list)):
+
+            # getting the individual values from list
+            view = views_list[i]
+            got_id = ids_list[i]
+
+            # EditText check
+            if view == "EditText":
+                # selected language check
+                if choose_lang == 1:
+                    got_id_got = "got"+got_id.capitalize()
+                    out = """
+                    val {} = {}.text.toString().trim()
+                    if({}.isEmpty()){}
+                        Misc().myT(this, "Please enter {}.", 0)
+                        return@setOnClickListener
+                    {}""".format(got_id_got, got_id, got_id_got, "{", got_id.capitalize(), "}")
+                    print(out)
+                elif choose_lang == 2:
+                    print("edittext empty check Not yet written for java. Please write")
+
     print("\nToatal {} ids found.".format(cnt))
         
