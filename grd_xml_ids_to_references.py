@@ -113,9 +113,9 @@ else:
             elif choose_lang == 2:
                 print("{} {} = ({}) findViewById(R.id.{});".format(view, got_id, view, got_id))
         
-        # priniting the data (variables declaration)
+        # priniting the data (variables declaration (Opt-A))
         print("")
-        print(bcolors.OKGREEN + "InDirect Part-1".format(xml_file) + bcolors.ENDC)
+        print(bcolors.OKGREEN + "InDirect Part-1 (Opt-A)".format(xml_file) + bcolors.ENDC)
         for i in range (0, len(views_list)):
 
             # getting the individual values from list
@@ -127,6 +127,22 @@ else:
                 print("private var {}: {}? = null".format(got_id, view))
             elif choose_lang == 2:
                 print("private {} {};".format(view, got_id))
+
+        # priniting the data (variables declaration  (Opt-B))
+        print("")
+        print(bcolors.OKGREEN + "InDirect Part-1 (Opt-B)".format(xml_file) + bcolors.ENDC)
+        for i in range (0, len(views_list)):
+
+            # getting the individual values from list
+            view = views_list[i]
+            got_id = ids_list[i]
+
+            # selected language check
+            if choose_lang == 1:
+                print("private laterinit var {}: {}".format(got_id, view))
+            elif choose_lang == 2:
+                pass
+                # print("private {} {};".format(view, got_id))
 
         # priniting the data (declared variables initialisation)
         print("")
