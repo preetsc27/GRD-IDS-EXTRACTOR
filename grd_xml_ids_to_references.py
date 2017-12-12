@@ -139,7 +139,7 @@ else:
 
             # selected language check
             if choose_lang == 1:
-                print("private laterinit var {}: {}".format(got_id, view))
+                print("private lateinit var {}: {}".format(got_id, view))
             elif choose_lang == 2:
                 pass
                 # print("private {} {};".format(view, got_id))
